@@ -615,8 +615,8 @@ function Hero({ onNav }) {
           <MagneticButton as="button" onClick={() => onNav("projects")} className="btn-primary">
             Explore My Work <ChevronRight size={16} />
           </MagneticButton>
-          <MagneticButton as="a" href="/Sehrish_Siddique_Resume.pdf" download target="_blank" rel="noreferrer" onClick={(event) => event.stopPropagation()} className="btn-ghost">
-            Download Resume
+          <MagneticButton as="a" href="/Sehrish_Siddique_CV.pdf" download target="_blank" rel="noreferrer" onClick={(event) => event.stopPropagation()} className="btn-ghost">
+            Download CV
           </MagneticButton>
         </div>
       </div>
