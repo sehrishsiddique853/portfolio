@@ -25,7 +25,7 @@ const FEATURED_PROJECTS = [
   {
     id: "foodbridge",
     name: "FoodBridge",
-    subtitle: "Local Food Charity System",
+    subtitle: "Local Food Distribution System",
     type: "Final Year Project · Full-Stack Web Application",
     stack: "MERN",
     what: "A full-stack food donation coordination platform connecting donors with verified NGOs, giving administrators a centralized workflow for managing users, donations, requests, and collection status. It solves the problem of coordinating surplus food donations end to end.",
@@ -48,9 +48,31 @@ const FEATURED_PROJECTS = [
       "Role-Based Access Control", "Database modeling", "MVC-style backend organization",
       "Secure cookie-based auth", "File handling", "Email integration", "Performance-conscious queries (.lean())",
     ],
-    demo: "https://www.foodbridge.com",
+    demo: "https://www.foodbridge.tech",
     github: "https://github.com/sehrishsiddique853/local-food-charity-system",
     icon: Layers,
+  },
+  {
+    id: "pycee",
+    name: "PYCEE Compiler",
+    subtitle: "Team-Based Compiler Construction",
+    type: "Compiler Design · C++",
+    stack: "C++",
+    what: "A team-based compiler construction project involving the design of a programming language and the implementation of core compiler components — lexical rules, grammar design, tokenization, lexical error detection, parsing, and syntax handling.",
+    how: "Grammar was defined for expressions, declarations, functions, conditionals, loops, operators and operator precedence. Contributed to a finite-state-machine-based lexical analyzer responsible for tokenization, token classification and lexical error detection, then gained practical exposure to LL(1) parsing — FIRST/FOLLOW sets, parsing-table construction, token mapping, and syntax-error handling.",
+    features: [
+      "Language / grammar design", "Finite-state-machine lexical analyzer", "Tokenization & token classification",
+      "Lexical error detection", "LL(1) parsing", "FIRST & FOLLOW set computation",
+      "Parsing-table construction", "Syntax-error handling",
+    ],
+    tech: { Language: ["C++"], Concepts: ["Compiler Construction", "FSMs", "LL(1) Parsing"] },
+    concepts: [
+      "Programming Languages → Formal Grammars → Compilers → Parsing → Language Processing",
+      "Demonstrates CS fundamentals beyond web development",
+    ],
+    demo: null,
+    github: "https://github.com/sehrishsiddique853/PYCEE_COMPILER",
+    icon: Cpu,
   },
   {
     id: "clinic",
@@ -79,28 +101,6 @@ const FEATURED_PROJECTS = [
     demo: null,
     github: "https://github.com/sehrishsiddique853/clinic-booking-sehrish",
     icon: Database,
-  },
-  {
-    id: "pycee",
-    name: "PYCEE Compiler",
-    subtitle: "Team-Based Compiler Construction",
-    type: "Compiler Design · C++",
-    stack: "C++",
-    what: "A team-based compiler construction project involving the design of a programming language and the implementation of core compiler components — lexical rules, grammar design, tokenization, lexical error detection, parsing, and syntax handling.",
-    how: "Grammar was defined for expressions, declarations, functions, conditionals, loops, operators and operator precedence. Contributed to a finite-state-machine-based lexical analyzer responsible for tokenization, token classification and lexical error detection, then gained practical exposure to LL(1) parsing — FIRST/FOLLOW sets, parsing-table construction, token mapping, and syntax-error handling.",
-    features: [
-      "Language / grammar design", "Finite-state-machine lexical analyzer", "Tokenization & token classification",
-      "Lexical error detection", "LL(1) parsing", "FIRST & FOLLOW set computation",
-      "Parsing-table construction", "Syntax-error handling",
-    ],
-    tech: { Language: ["C++"], Concepts: ["Compiler Construction", "FSMs", "LL(1) Parsing"] },
-    concepts: [
-      "Programming Languages → Formal Grammars → Compilers → Parsing → Language Processing",
-      "Demonstrates CS fundamentals beyond web development",
-    ],
-    demo: null,
-    github: "https://github.com/sehrishsiddique853/PYCEE_COMPILER",
-    icon: Cpu,
   },
   {
     id: "voting",
@@ -157,11 +157,11 @@ const OTHER_PROJECTS = [
 
 const SKILLS = {
   Frontend: { icon: Code2, items: ["React.js", "JavaScript", "HTML5", "CSS3", "Tailwind CSS", "Responsive UI"] },
-  Backend: { icon: Server, items: ["Node.js", "Express.js", "REST APIs", "MVC", "CRUD", "API Design"] },
-  Databases: { icon: Database, items: ["MongoDB", "Mongoose", "MySQL", "Database Design", "Data Modeling"] },
+  Backend: { icon: Server, items: ["Node.js", "Express.js", "Flask", "REST APIs", "MVC", "CRUD", "API Design"] },
+  Databases: { icon: Database, items: ["MongoDB", "Mongoose", "MySQL", "PostgreSQL", "Supabase", "Database Design"] },
   Security: { icon: ShieldCheck, items: ["JWT", "bcrypt", "HTTP-only Cookies", "RBAC", "Input Validation"] },
   "Software Engineering": { icon: Layers, items: ["OOP", "Design Patterns", "Software Architecture", "REST Architecture", "Modular Design"] },
-  DevOps: { icon: Terminal, items: ["Git", "GitHub"] },
+  Tools: { icon: Terminal, items: ["Git", "GitHub", "Swagger / OpenAPI", "Postman"] },
 };
 
 const EDU_AREAS = [
@@ -589,41 +589,33 @@ function Hero({ onNav }) {
           </div>
           <div className="p-4 font-mono text-sm leading-relaxed">
             <div style={{ color: "var(--muted)" }}>
-              <span style={{ color: "var(--accent)" }}>$</span> whoami
-            </div>
-            <div style={{ color: "var(--text)" }}>
-              <TypedLine text="Sehrish Siddique — Full-Stack Developer" speed={35} onDone={() => setLine2Done(true)} />
+                <span style={{ color: "var(--accent)" }}>$</span> whoami
+              </div>
+              <div style={{ color: "var(--text)" }}>
+                <TypedLine text="Sehrish Siddique — Software Developer" speed={35} onDone={() => setLine2Done(true)} />
             </div>
             {line2Done && (
               <div style={{ color: "var(--muted)" }} className="mt-1">
-                <TypedLine text="> loading interests... frontend systems, backend architecture, product engineering" speed={20} />
+                  <TypedLine text="> backend systems, full-stack applications, compiler design" speed={20} />
                 <span className="cursor-blink ml-1" style={{ background: "var(--accent)" }} />
               </div>
             )}
           </div>
         </div>
 
-        <h1 className="font-display font-semibold leading-[1.05] tracking-tight text-4xl sm:text-5xl md:text-6xl mb-6" style={{ color: "var(--text)" }}>
-          <span className="hero-line hero-word" style={{ animationDelay: "0.15s" }}>Building software from the</span><br />
-          <span className="hero-line hero-word" style={{ animationDelay: "0.32s" }}><span className="text-shimmer hero-highlight">interface</span> to the</span><br />
-          <span className="hero-line hero-word" style={{ animationDelay: "0.48s" }}>system behind it.</span>
-        </h1>
+        <h3 className="font-display font-semibold leading-[1.05] tracking-tight text-4xl sm:text-6xl md:text-5xl mb-6" style={{ color: "var(--text)" }}>
+          <span className="hero-line hero-word" style={{ animationDelay: "0.15s" }}>Software developer building</span><br />
+          <span className="hero-line hero-word" style={{ animationDelay: "0.32s" }}><span className="text-shimmer hero-highlight">backend systems</span> and</span><br />
+          <span className="hero-line hero-word" style={{ animationDelay: "0.48s" }}>full-stack products.</span>
+        </h3>
 
-        <p className="max-w-3xl mx-auto mb-10 text-base md:text-lg leading-relaxed hero-copy" style={{ color: "var(--muted)" }}>
-          <span className="hero-copy-line">Computer Science Graduate</span>
-          <span className="hero-copy-sep"> · </span>
-          <span className="hero-copy-line">Full-Stack Developer</span>
-          <span className="hero-copy-sep"> — </span>
-          <span className="hero-copy-line">focused on crafting responsive interfaces,</span>
-          <span className="hero-copy-line">building reliable backend systems, and shaping software architecture that balances</span>
-          <span className="hero-copy-line">  performance, maintainability, and real-world product needs.</span>
-        </p>
+     
 
         <div className="flex flex-wrap items-center justify-center gap-4">
           <MagneticButton as="button" onClick={() => onNav("projects")} className="btn-primary">
             Explore My Work <ChevronRight size={16} />
           </MagneticButton>
-          <MagneticButton as="a" href="/Sehrish_Siddique_Resume.pdf" download className="btn-ghost">
+          <MagneticButton as="a" href="/Sehrish_Siddique_Resume.pdf" download target="_blank" rel="noreferrer" onClick={(event) => event.stopPropagation()} className="btn-ghost">
             Download Resume
           </MagneticButton>
         </div>
@@ -662,7 +654,7 @@ function About() {
         <div className="grid md:grid-cols-5 gap-12 items-start">
           <Reveal className="md:col-span-3" delay={80} dir="left">
             <h2 className="font-display text-2xl md:text-3xl font-semibold mb-6" style={{ color: "var(--text)" }}>
-              Sehrish Siddique — Computer Science graduate & Full-Stack Developer
+              Software developer focused on backend systems and full-stack applications
             </h2>
             <div className="space-y-4 text-[15px] leading-relaxed" style={{ color: "var(--muted)" }}>
               <p>
@@ -748,6 +740,37 @@ function ProjectModal({ project, onClose }) {
           <ModalBlock title="Overview">{project.what}</ModalBlock>
           <ModalBlock title="How It Works">{project.how}</ModalBlock>
 
+          {project.id === "foodbridge" && (
+            <div>
+              <ModalHeading>Donation Workflow</ModalHeading>
+              <div className="flex flex-wrap items-center gap-2 mt-3 font-mono text-xs">
+                {["Donor posts food", "NGO requests", "Admin approves", "Collection booked", "Donation collected"].map((step, i) => (
+                  <span key={step} className="flex items-center gap-2">
+                    <span className="pill-sm">{step}</span>
+                    {i < 4 && <ChevronRight size={13} style={{ color: "var(--accent)" }} />}
+                  </span>
+                ))}
+              </div>
+            </div>
+          )}
+
+          {project.id === "pycee" && (
+            <div>
+              <ModalHeading>Compiler Front End</ModalHeading>
+              <div className="grid grid-cols-2 sm:grid-cols-5 gap-2 mt-3">
+                {["Source code", "Lexer", "Tokens", "LL(1) parser", "Syntax validation"].map((step, i) => (
+                  <div key={step} className="compiler-step">
+                    <span className="font-mono text-[10px]" style={{ color: "var(--accent)" }}>0{i + 1}</span>
+                    <span className="text-xs" style={{ color: "var(--text)" }}>{step}</span>
+                  </div>
+                ))}
+              </div>
+              <p className="mt-3 font-mono text-xs" style={{ color: "var(--muted)" }}>
+                Grammar → FIRST/FOLLOW sets → parsing-table construction → predictive syntax analysis
+              </p>
+            </div>
+          )}
+
           <div>
             <ModalHeading>Key Features</ModalHeading>
             <div className="flex flex-wrap gap-2 mt-3">
@@ -789,6 +812,11 @@ function ProjectModal({ project, onClose }) {
                 Live Demo <ArrowUpRight size={14} />
               </a>
             )}
+            {project.id === "foodbridge" && (
+              <a href="/foodbridge-documentation.pdf" target="_blank" rel="noreferrer" className="btn-ghost !py-2">
+                <BookOpen size={15} /> View Documentation
+              </a>
+            )}
           </div>
         </div>
       </div>
@@ -820,6 +848,17 @@ function FeaturedCard({ project, index, onOpen }) {
       ref={setRefs}
       onMouseMove={tilt.onMouseMove}
       onMouseLeave={tilt.onMouseLeave}
+      onClick={(event) => {
+        if (!event.target.closest("a, button")) onOpen(project);
+      }}
+      onKeyDown={(event) => {
+        if ((event.key === "Enter" || event.key === " ") && event.target === event.currentTarget) {
+          event.preventDefault();
+          onOpen(project);
+        }
+      }}
+      role="button"
+      tabIndex={0}
       className={`reveal ${index % 2 === 0 ? "reveal-left" : "reveal-right"} ${visible ? "reveal-visible" : ""} project-card group`}
       style={{ transitionDelay: `${index * 90}ms` }}
     >
@@ -844,6 +883,11 @@ function FeaturedCard({ project, index, onOpen }) {
         <button onClick={() => onOpen(project)} className="link-accent">Case Study →</button>
         <a href={project.github} target="_blank" rel="noreferrer" className="link-muted flex items-center gap-1"><Github size={13} /> GitHub</a>
         {project.demo && <a href={project.demo} target="_blank" rel="noreferrer" className="link-muted flex items-center gap-1"><ExternalLink size={13} /> Demo</a>}
+        {project.id === "foodbridge" && (
+          <a href="/foodbridge-documentation.pdf" target="_blank" rel="noreferrer" onClick={(event) => event.stopPropagation()} className="link-muted flex items-center gap-1">
+            <BookOpen size={13} /> View Documentation
+          </a>
+        )}
       </div>
     </div>
   );
@@ -958,7 +1002,7 @@ function Skills() {
 function TimelineEntry({ icon: Icon, org, role, meta, body, tags, index }) {
   const [ref, visible] = useReveal();
   return (
-    <div ref={ref} className={`reveal ${index % 2 === 0 ? "reveal-left" : "reveal-right"} ${visible ? "reveal-visible" : ""} relative pl-14 pb-2`} style={{ transitionDelay: `${index * 100}ms` }}>
+    <div ref={ref} className={`timeline-entry reveal ${index % 2 === 0 ? "reveal-left" : "reveal-right"} ${visible ? "reveal-visible" : ""} relative pl-14 pb-2`} style={{ transitionDelay: `${index * 100}ms` }}>
       <span className="absolute left-0 top-0 timeline-dot">
         <Icon size={15} style={{ color: "var(--accent)" }} />
       </span>
@@ -986,16 +1030,25 @@ function Experience() {
         <Reveal><SectionEyebrow index="04" label="Experience" /></Reveal>
         <Reveal delay={60}>
           <h2 className="font-display text-2xl md:text-3xl font-semibold mb-14" style={{ color: "var(--text)" }}>
-            Where I've worked.
+            Backend and web development experience.
           </h2>
         </Reveal>
         <div className="relative">
           <span className="absolute left-[27px] top-2 bottom-2 w-px timeline-line" />
           <TimelineEntry
             index={0}
+            icon={Server}
+            role="Backend Developer Intern"
+            org="Techfy · Remote"
+            meta="Sep 2026 – Present"
+            body="Developing and maintaining backend services for a student-management application using Python, Flask, and Supabase. Designing and integrating authenticated RESTful CRUD APIs, implementing server-side business logic, managing application data, and connecting backend services with client-facing features. Testing APIs, debugging root causes, improving query and application performance, writing clean reusable code, and maintaining Swagger/OpenAPI documentation for reliable review and integration."
+            tags={["Python", "Flask", "Supabase", "REST APIs", "Authentication", "CRUD", "API Testing", "Swagger / OpenAPI", "Git"]}
+          />
+          <TimelineEntry
+            index={1}
             icon={Briefcase}
             role="Web Developer Intern"
-            org="TechHash Solutions · Pakistan"
+            org="TechoHash Solutions · Rawalpindi, Pakistan"
             meta="Aug 2024 – Sep 2024"
             body="A web development internship building and improving responsive, interactive web applications in a professional development environment — developing interfaces with HTML, CSS and JavaScript, implementing frontend functionality against project requirements, improving usability across screen sizes, and adapting existing project code to meet application needs. This experience moved me from academic coursework toward practical, professional software development."
             tags={["HTML5", "CSS3", "JavaScript", "Responsive Web Design"]}
@@ -1072,10 +1125,10 @@ function Research() {
 
         <div ref={ref} className={`reveal reveal-right ${visible ? "reveal-visible" : ""} research-card`}>
           <div className="flex items-center gap-2 mb-3 font-mono text-[11px] tracking-widest uppercase" style={{ color: "var(--accent)" }}>
-            <FlaskConical size={14} /> Group Research-Based Academic Project
+            <FlaskConical size={14} /> Internet of Underwater Things · Research Project
           </div>
           <h3 className="font-display text-xl md:text-2xl font-semibold mb-2" style={{ color: "var(--text)" }}>
-            Learning-Based Physical-Layer Authentication Techniques
+            Learning-Based Physical-Layer Authentication for IoUT
           </h3>
           <div className="text-sm mb-6" style={{ color: "var(--muted)" }}>
             Cybersecurity · Machine Learning · Physical-Layer Security · Underwater Acoustic Networks
@@ -1133,9 +1186,12 @@ function Research() {
           </p>
 
           <div className="flex flex-wrap gap-3">
-            <span className="btn-ghost !py-2 cursor-default opacity-70">View Research Paper</span>
-            <span className="btn-ghost !py-2 cursor-default opacity-70">View Presentation</span>
-            <span className="btn-ghost !py-2 cursor-default opacity-70">View Report</span>
+            <a href="/iout-research-paper.pdf" target="_blank" rel="noreferrer" className="btn-ghost !py-2">
+              <BookOpen size={15} /> View Research Paper
+            </a>
+            <a href="/iout-research-presentation.pptx" target="_blank" rel="noreferrer" className="btn-ghost !py-2">
+              <ExternalLink size={15} /> View Presentation
+            </a>
           </div>
         </div>
       </div>
@@ -1170,7 +1226,7 @@ function GithubSection() {
           </div>
           <div className="p-5 font-mono text-[13px] space-y-2 max-h-72 overflow-y-auto">
             {ALL_REPOS.map((r) => (
-              <a key={r.github} href={r.github} target="_blank" rel="noreferrer" className="flex items-center gap-2 group py-1">
+              <a key={r.github} href={r.github} target="_blank" rel="noreferrer" className="github-repo-link flex items-center gap-2 group py-1">
                 <span style={{ color: "var(--accent)" }}>$</span>
                 <span style={{ color: "var(--muted)" }}>git clone</span>
                 <span className="group-hover:underline" style={{ color: "var(--text)" }}>{r.name}</span>
@@ -1615,6 +1671,12 @@ export default function App() {
           border: 1px solid rgba(255,138,93,0.2); color: var(--accent); background: rgba(255,138,93,0.05);
         }
 
+        .compiler-step {
+          min-height: 72px; display:flex; flex-direction:column; justify-content:space-between; gap:8px;
+          padding: 10px; border: 1px solid rgba(255,138,93,0.22); border-radius: 8px;
+          background: rgba(255,138,93,0.04);
+        }
+
         .link-accent { color: var(--accent); font-weight:500; transition: opacity .2s; }
         .link-accent:hover { opacity: 0.75; }
         .link-muted { color: var(--muted); transition: color .2s; }
@@ -1693,6 +1755,33 @@ export default function App() {
         ::-webkit-scrollbar-track { background: var(--bg); }
         ::-webkit-scrollbar-thumb { background: #23262f; border-radius: 8px; }
         ::-webkit-scrollbar-thumb:hover { background: #2f333f; }
+
+        @media (max-width: 640px) {
+          #portfolio-root { overflow-x: hidden; }
+          #portfolio-root section { padding-left: 1rem; padding-right: 1rem; }
+          #portfolio-root .hero-line { max-width: 100%; }
+          #portfolio-root h1 { font-size: clamp(2rem, 9vw, 2.75rem); line-height: 1.08; }
+          .hero-copy { font-size: 0.9rem; line-height: 1.65; }
+          .hero-copy-sep { display: none; }
+          .project-card { padding: 20px; border-radius: 12px; }
+          .other-card { padding: 16px; }
+          .research-card, .form-card { padding: 20px; border-radius: 12px; }
+          .timeline-dot { left: -2px; }
+          .timeline-line { left: 15px; }
+          .timeline-entry { padding-left: 2.75rem; }
+          .contact-pill { max-width: 100%; padding: 10px 12px; font-size: 0.72rem; overflow-wrap: anywhere; }
+          .modal-pop { margin-top: 1rem; margin-bottom: 1rem; border-radius: 12px; }
+          .modal-pop > div:last-child { padding: 1rem; }
+          .compiler-step { min-height: 60px; }
+          .github-repo-link { align-items: flex-start; flex-wrap: wrap; overflow-wrap: anywhere; }
+        }
+
+        @media (max-width: 380px) {
+          #portfolio-root h1 { font-size: 1.85rem; }
+          .hero-copy { font-size: 0.84rem; }
+          .timeline-entry { padding-left: 2.5rem; }
+          .compiler-step { min-height: 54px; padding: 8px; }
+        }
       `}</style>
 
       <div id="portfolio-root">
