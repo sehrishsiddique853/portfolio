@@ -1037,15 +1037,24 @@ function Experience() {
           <span className="absolute left-[27px] top-2 bottom-2 w-px timeline-line" />
           <TimelineEntry
             index={0}
+            icon={Briefcase}
+            role="Full Stack Developer Intern"
+            org="Technosoft · Remote"
+            meta="Sep 2026 – Present"
+            body="Developing a full-stack e-commerce platform using React.js, Node.js, Express.js, and MySQL, creating responsive product interfaces, dynamic catalogs, and customizable shopping workflows to improve product discovery and ordering. Designing RESTful APIs, relational database structures, admin-managed product workflows, and payment integration to streamline order processing, centralize product management, and support secure online transactions."
+            tags={["React.js", "Node.js", "Express.js", "MySQL", "REST APIs", "E-commerce", "Admin Dashboard", "Payment Integration"]}
+          />
+          <TimelineEntry
+            index={1}
             icon={Server}
             role="Backend Developer Intern"
             org="Techfy · Remote"
-            meta="Sep 2026 – Present"
+            meta="Sep 2026 – Sep 2026"
             body="Developing and maintaining backend services for a student-management application using Python, Flask, and Supabase. Designing and integrating authenticated RESTful CRUD APIs, implementing server-side business logic, managing application data, and connecting backend services with client-facing features. Testing APIs, debugging root causes, improving query and application performance, writing clean reusable code, and maintaining Swagger/OpenAPI documentation for reliable review and integration."
             tags={["Python", "Flask", "Supabase", "REST APIs", "Authentication", "CRUD", "API Testing", "Swagger / OpenAPI", "Git"]}
           />
           <TimelineEntry
-            index={1}
+            index={2}
             icon={Briefcase}
             role="Web Developer Intern"
             org="TechoHash Solutions · Rawalpindi, Pakistan"
