@@ -929,6 +929,68 @@ function Projects() {
         </div>
 
         <Reveal>
+          <div className="mb-8">
+            <div className="flex items-center gap-3 mb-3">
+              <BookOpen size={16} style={{ color: "var(--accent)" }} />
+              <span className="font-mono text-xs tracking-widest uppercase" style={{ color: "var(--muted)" }}>HCI & interaction design coursework</span>
+            </div>
+            <h3 className="font-display text-xl md:text-2xl font-semibold mb-2" style={{ color: "var(--text)" }}>
+              Designing for people, context, and behaviour.
+            </h3>
+            <p className="text-sm max-w-3xl leading-relaxed" style={{ color: "var(--muted)" }}>
+              Two academic group assignments exploring inclusive service navigation and persuasive interface design. These are coursework concepts and analyses, not deployed or user-validated products.
+            </p>
+          </div>
+        </Reveal>
+
+        <div className="grid md:grid-cols-2 gap-5 mb-20">
+          <Reveal delay={40}>
+            <article className="project-card h-full">
+              <div className="flex items-start justify-between mb-5">
+                <div className="w-11 h-11 rounded-lg flex items-center justify-center" style={{ background: "rgba(255,138,93,0.08)", border: "1px solid rgba(255,138,93,0.25)" }}>
+                  <ShieldCheck size={19} style={{ color: "var(--accent)" }} />
+                </div>
+                <span className="font-mono text-xs" style={{ color: "var(--muted)" }}>HCI · 01</span>
+              </div>
+              <h3 className="font-display text-xl font-semibold mb-1" style={{ color: "var(--text)" }}>CarePath CMH</h3>
+              <div className="font-mono text-xs mb-4" style={{ color: "var(--accent)" }}>Hospital Visit Planning Simulator · Group Assignment</div>
+              <p className="text-sm leading-relaxed mb-5" style={{ color: "var(--muted)" }}>
+                A proposed hospital-visit planning simulation exploring how patient circumstances shape department recommendations, waiting-time expectations, and navigation. Scenarios consider wheelchair-accessible routes, first-time visitor guidance, appointment and document status, and explanatory outcome feedback.
+              </p>
+              <div className="flex flex-wrap gap-1.5 mb-6">
+                {["Inclusive design", "Accessible navigation", "Context-aware guidance", "Decision support", "Explanatory feedback"].map((tag) => <span key={tag} className="pill-sm">{tag}</span>)}
+              </div>
+              <div className="flex items-center gap-4 font-mono text-xs mt-auto pt-4" style={{ borderTop: "1px solid rgba(255,255,255,0.06)" }}>
+                <a href="/hci-coursework/carepath-cmh.md" target="_blank" rel="noreferrer" className="link-accent flex items-center gap-1">View assignment <ArrowUpRight size={13} /></a>
+                <a href="https://github.com/sehrishsiddique853/portfolio/blob/main/hci-coursework/carepath-cmh.md" target="_blank" rel="noreferrer" className="link-muted flex items-center gap-1"><Github size={13} /> GitHub</a>
+              </div>
+            </article>
+          </Reveal>
+          <Reveal delay={100}>
+            <article className="project-card h-full">
+              <div className="flex items-start justify-between mb-5">
+                <div className="w-11 h-11 rounded-lg flex items-center justify-center" style={{ background: "rgba(255,138,93,0.08)", border: "1px solid rgba(255,138,93,0.25)" }}>
+                  <Layers size={19} style={{ color: "var(--accent)" }} />
+                </div>
+                <span className="font-mono text-xs" style={{ color: "var(--muted)" }}>HCI · 02</span>
+              </div>
+              <h3 className="font-display text-xl font-semibold mb-1" style={{ color: "var(--text)" }}>Persuasive Technology & Instagram</h3>
+              <div className="font-mono text-xs mb-4" style={{ color: "var(--accent)" }}>Interface Analysis & Design Proposals · Group Assignment</div>
+              <p className="text-sm leading-relaxed mb-5" style={{ color: "var(--muted)" }}>
+                An analysis of Instagram through persuasive technology strategies—including reduction, tunnelling, tailoring, suggestion, self-monitoring, surveillance, and conditioning—with proposed messaging and story-expiry interface cues.
+              </p>
+              <div className="flex flex-wrap gap-1.5 mb-6">
+                {["Persuasive technology", "Behaviour design", "Interface critique", "Self-monitoring", "Design proposals"].map((tag) => <span key={tag} className="pill-sm">{tag}</span>)}
+              </div>
+              <div className="flex items-center gap-4 font-mono text-xs mt-auto pt-4" style={{ borderTop: "1px solid rgba(255,255,255,0.06)" }}>
+                <a href="/hci-coursework/persuasive-technology-instagram.md" target="_blank" rel="noreferrer" className="link-accent flex items-center gap-1">View assignment <ArrowUpRight size={13} /></a>
+                <a href="https://github.com/sehrishsiddique853/portfolio/blob/main/hci-coursework/persuasive-technology-instagram.md" target="_blank" rel="noreferrer" className="link-muted flex items-center gap-1"><Github size={13} /> GitHub</a>
+              </div>
+            </article>
+          </Reveal>
+        </div>
+
+        <Reveal>
           <div className="flex items-center gap-3 mb-8">
             <FolderGit2 size={16} style={{ color: "var(--accent)" }} />
             <span className="font-mono text-xs tracking-widest uppercase" style={{ color: "var(--muted)" }}>more projects</span>
