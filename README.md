@@ -52,3 +52,13 @@ simplified — this is just the same component dropped into a
 runnable project scaffold.
 
 Icons come from [`lucide-react`](https://lucide.dev/).
+
+
+## HCI & Interaction Design Coursework
+
+I have also documented two Human–Computer Interaction assignments exploring inclusive interaction design, service navigation, and persuasive technology:
+
+- [CarePath CMH — Hospital Visit Planning Simulator](./hci-coursework/carepath-cmh.md)
+- [Persuasive Technology Strategies and Instagram](./hci-coursework/persuasive-technology-instagram.md)
+
+See the [HCI coursework index](./hci-coursework/README.md) for an overview.
