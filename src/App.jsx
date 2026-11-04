@@ -961,8 +961,8 @@ function Projects() {
                 {["Inclusive design", "Accessible navigation", "Context-aware guidance", "Decision support", "Explanatory feedback"].map((tag) => <span key={tag} className="pill-sm">{tag}</span>)}
               </div>
               <div className="flex items-center gap-4 font-mono text-xs mt-auto pt-4" style={{ borderTop: "1px solid rgba(255,255,255,0.06)" }}>
-                <a href="/hci-coursework/carepath-cmh.md" target="_blank" rel="noreferrer" className="link-accent flex items-center gap-1">View assignment <ArrowUpRight size={13} /></a>
-                <a href="https://github.com/sehrishsiddique853/portfolio/blob/main/hci-coursework/carepath-cmh.md" target="_blank" rel="noreferrer" className="link-muted flex items-center gap-1"><Github size={13} /> GitHub</a>
+                <a href="/hci-coursework/carepath-cmh.pdf" target="_blank" rel="noreferrer" className="link-accent flex items-center gap-1">View assignment <ArrowUpRight size={13} /></a>
+                <a href="https://github.com/sehrishsiddique853/portfolio/blob/main/hci-coursework/carepath-cmh.pdf" target="_blank" rel="noreferrer" className="link-muted flex items-center gap-1"><Github size={13} /> GitHub</a>
               </div>
             </article>
           </Reveal>
@@ -983,8 +983,8 @@ function Projects() {
                 {["Persuasive technology", "Behaviour design", "Interface critique", "Self-monitoring", "Design proposals"].map((tag) => <span key={tag} className="pill-sm">{tag}</span>)}
               </div>
               <div className="flex items-center gap-4 font-mono text-xs mt-auto pt-4" style={{ borderTop: "1px solid rgba(255,255,255,0.06)" }}>
-                <a href="/hci-coursework/persuasive-technology-instagram.md" target="_blank" rel="noreferrer" className="link-accent flex items-center gap-1">View assignment <ArrowUpRight size={13} /></a>
-                <a href="https://github.com/sehrishsiddique853/portfolio/blob/main/hci-coursework/persuasive-technology-instagram.md" target="_blank" rel="noreferrer" className="link-muted flex items-center gap-1"><Github size={13} /> GitHub</a>
+                <a href="/hci-coursework/persuasive-technology-instagram.pdf" target="_blank" rel="noreferrer" className="link-accent flex items-center gap-1">View assignment <ArrowUpRight size={13} /></a>
+                <a href="https://github.com/sehrishsiddique853/portfolio/blob/main/hci-coursework/persuasive-technology-instagram.pdf" target="_blank" rel="noreferrer" className="link-muted flex items-center gap-1"><Github size={13} /> GitHub</a>
               </div>
             </article>
           </Reveal>
