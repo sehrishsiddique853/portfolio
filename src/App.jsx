@@ -17,6 +17,7 @@ const NAV_LINKS = [
   { id: "skills", label: "skills" },
   { id: "experience", label: "experience" },
   { id: "education", label: "education" },
+  { id: "recommendations", label: "recommendations" },
   { id: "research", label: "research" },
   { id: "contact", label: "contact" },
 ];
@@ -1168,6 +1169,85 @@ function Education() {
 }
 
 /* ---------------------------------------------------------------------- */
+/* ACADEMIC RECOMMENDATIONS                                                */
+/* ---------------------------------------------------------------------- */
+
+const RECOMMENDATIONS = [
+  {
+    name: "Dr. Akmal Saeed Khattak",
+    role: "Associate Professor · Department of Computer Sciences",
+    relationship: "Final-year project supervisor · Web Application Frameworks instructor",
+    date: "28 August 2026",
+    summary: "Supervised the Local Food Distribution System for Hunger Relief and taught Web Application Frameworks. Highlights her MERN-stack familiarity, analytical ability, communication, reliability, work ethic, and eagerness to learn.",
+    file: "/recommendations/rec1.pdf",
+    number: "01",
+  },
+  {
+    name: "Dr. M. Shuaib Karim",
+    role: "Assistant Professor (Retd.) · Department of Computer Science",
+    relationship: "Human-Computer Interaction · ICT and Society",
+    date: "25 August 2026",
+    summary: "Recognizes her performance in HCI and ICT and Society, problem analysis, critical feedback and improvement recommendations, and ability to work independently as well as in teams.",
+    file: "/recommendations/rec2.pdf",
+    number: "02",
+  },
+  {
+    name: "Prof. Dr. Rabeeh Ayaz Abbasi",
+    role: "Department of Computer Science",
+    relationship: "Data Structures and Algorithms · Web Application Development",
+    date: "2 October 2026",
+    summary: "Highlights her A grade in Data Structures and Algorithms, practical implementation of data structures, responsive web development, and ability to connect theoretical concepts with working applications.",
+    file: "/recommendations/rec3.pdf",
+    number: "03",
+  },
+];
+
+function Recommendations() {
+  return (
+    <section id="recommendations" className="relative py-28 px-6" style={{ background: "var(--bg-elev-2)" }}>
+      <div className="max-w-5xl mx-auto">
+        <Reveal><SectionEyebrow index="06" label="Academic Recommendations" /></Reveal>
+        <Reveal delay={60}>
+          <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-4 mb-12">
+            <h2 className="font-display text-2xl md:text-3xl font-semibold" style={{ color: "var(--text)" }}>
+              What my instructors say.
+            </h2>
+            <p className="font-mono text-xs" style={{ color: "var(--muted)" }}>QUAID-I-AZAM UNIVERSITY · 2026</p>
+          </div>
+        </Reveal>
+
+        <div className="grid md:grid-cols-2 gap-5">
+          {RECOMMENDATIONS.map((item, index) => (
+            <Reveal key={item.number} delay={index * 70} className={index === 0 ? "md:col-span-2" : ""}>
+              <article className="project-card h-full">
+                <div className="flex items-start justify-between gap-4 mb-6">
+                  <span className="font-mono text-xs tracking-widest" style={{ color: "var(--accent)" }}>LETTER_{item.number}</span>
+                  <span className="font-mono text-[10px]" style={{ color: "var(--muted)" }}>{item.date}</span>
+                </div>
+                <h3 className="font-display text-lg md:text-xl font-semibold mb-1" style={{ color: "var(--text)" }}>{item.name}</h3>
+                <p className="text-sm mb-3" style={{ color: "var(--muted)" }}>{item.role}</p>
+                <div className="font-mono text-[11px] leading-relaxed mb-5" style={{ color: "var(--accent)" }}>{item.relationship}</div>
+                <p className="text-sm leading-relaxed mb-7" style={{ color: "var(--muted)" }}>{item.summary}</p>
+                <div className="mt-auto">
+                  <a href={item.file} target="_blank" rel="noreferrer" className="btn-ghost w-fit">
+                    <BookOpen size={15} /> View recommendation <ArrowUpRight size={14} />
+                  </a>
+                </div>
+              </article>
+            </Reveal>
+          ))}
+        </div>
+        <Reveal delay={180}>
+          <p className="mt-6 text-xs leading-relaxed" style={{ color: "var(--muted)" }}>
+            Recommendation letters are provided as PDF documents. Each link opens its corresponding letter.
+          </p>
+        </Reveal>
+      </div>
+    </section>
+  );
+}
+
+/* ---------------------------------------------------------------------- */
 /* RESEARCH                                                                */
 /* ---------------------------------------------------------------------- */
 
@@ -1187,7 +1267,7 @@ function Research() {
   return (
     <section id="research" className="relative py-28 px-6">
       <div className="max-w-4xl mx-auto">
-        <Reveal><SectionEyebrow index="06" label="Academic / Research Work" /></Reveal>
+        <Reveal><SectionEyebrow index="07" label="Academic / Research Work" /></Reveal>
         <Reveal delay={60}>
           <h2 className="font-display text-2xl md:text-3xl font-semibold mb-14" style={{ color: "var(--text)" }}>
             Research, formally.
@@ -1867,6 +1947,7 @@ export default function App() {
           <Skills />
           <Experience />
           <Education />
+          <Recommendations />
           <Research />
           <Interests />
           <GithubSection />
